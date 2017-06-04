@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>kitty</artifactId>
+        <groupId>kitty</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <artifactId>kitty-arch</artifactId>
+    <version>1.0.0</version>
+    <packaging>jar</packaging>
+    <name>kitty-arch</name>
+    <url>http://maven.apache.org</url>
+
+    <dependencies>
+		<dependency>
+      		<groupId>org.apache.zookeeper</groupId>
+       		<artifactId>zookeeper</artifactId>
+       		<version>3.4.6</version>
+ 		</dependency>    
+    
+        <dependency>
+            <groupId>kitty</groupId>
+            <artifactId>kitty-dal</artifactId>
+        </dependency>           
+        <dependency>
+            <groupId>com.alibaba.toolkit.biz.command</groupId>
+            <artifactId>command</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.taobao.notify</groupId>
+            <artifactId>notify-common</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.taobao.notify</groupId>
+            <artifactId>notify-tr-client</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+
+    </dependencies>
+</project>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Maven POM  -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>kitty</groupId>
+    <artifactId>kitty</artifactId>
+    <name>kitty</name>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <properties>
+        <java.version>1.5</java.version>
+        <java.encoding>UTF-8</java.encoding>
+        <webx-version>3.0.7</webx-version>
+        <spring-version>2.5.6</spring-version>
+        <springext-plugin-version>1.0</springext-plugin-version>
+        <jetty-version>6.1.22</jetty-version>
+        <project.build.sourceEncoding>${java.encoding}</project.build.sourceEncoding>
+    </properties>
+    
+    <modules>
+        <module>kitty-dal</module>
+        <module>kitty-arch</module>
+        <module>kitty-web</module>
+        <module>deploy</module>
+    </modules>
+    
+    <dependencyManagement>
+        <dependencies>
+            <!-- ================================================= -->
+            <!-- 本地工程 -->
+            <!-- ================================================= -->
+            <dependency>
+                <groupId>kitty</groupId>
+                <artifactId>kitty-dal</artifactId>
+                <version>1.0.0</version>
+            </dependency>                             
+            <dependency>
+                <groupId>kitty</groupId>
+                <artifactId>kitty-biz</artifactId>
+                <version>1.0.0</version>
+           </dependency>
+           
+            <!-- ================================================= -->
+            <!-- Webx框架依赖 -->
+            <!-- ================================================= -->
+            <dependency>
+                <groupId>com.alibaba.citrus</groupId>
+                <artifactId>citrus-webx-all-in-one</artifactId>
+                <version>3.0.5</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.toolkit</groupId>
+                <artifactId>toolkit-webx-all-in-one</artifactId>
+                <version>2.0</version>
+            </dependency>            
+           <dependency>
+                <groupId>com.alibaba.toolkit.biz.command</groupId>
+                <artifactId>command</artifactId>
+                <version>1.0</version>
+            </dependency>       
+                 
+            <!-- ================================================= -->
+            <!-- Spring框架 -->
+            <!-- ================================================= -->         
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring</artifactId>
+                <version>${spring-version}</version>
+            </dependency>   
+                        
+            <!-- ================================================= -->
+            <!-- 单元测试 -->
+            <!-- ================================================= -->
+            <dependency>
+                <groupId>com.alibaba.citrus</groupId>
+                <artifactId>citrus-test-all</artifactId>
+                <version>3.0.7</version>
+                <scope>test</scope>
+            </dependency>       
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.6</version>
+            </dependency>
+                 
+            <!-- ======================================== -->
+            <!-- 其它第三方依赖 -->
+            <!-- ======================================== -->
+            <dependency>
+                <groupId>com.taobao.util</groupId>
+                <artifactId>util</artifactId>
+                <version>1.2.6</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>2.5</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>            
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.13</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.ibatis</groupId>
+                <artifactId>ibatis-sqlmap</artifactId>
+                <version>2.3.4.726</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>    
+    
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+             <plugin>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <configuration>
+                    <includes>
+                        <include>**/*Tests.java</include>
+                    </includes>
+                    <argLine>-Xmx256m</argLine>
+                </configuration>
+            </plugin>           
+            <plugin>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <configuration>
+                    <downloadSources>true</downloadSources>
+                    <classpathContainers>
+                        <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
+                    </classpathContainers>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.mortbay.jetty</groupId>
+                <artifactId>maven-jetty-plugin</artifactId>
+                <configuration>
+                    <contextPath>/</contextPath>
+                    <connectors>
+                        <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
+                            <port>8081</port>
+                            <maxIdleTime>60000</maxIdleTime>
+                        </connector>
+                    </connectors>
+                    <requestLog implementation="org.mortbay.jetty.NCSARequestLog">
+                        <filename>target/access.log</filename>
+                        <retainDays>90</retainDays>
+                        <append>false</append>
+                        <extended>false</extended>
+                        <logTimeZone>GMT+8:00</logTimeZone>
+                    </requestLog>
+                    <systemProperties>
+                        <systemProperty>
+                            <name>productionMode</name>
+                            <value>false</value>
+                        </systemProperty>
+                    </systemProperties>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.alibaba.citrus.tool</groupId>
+                <artifactId>maven-springext-plugin</artifactId>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>               
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.3.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.3.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>2.7</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-eclipse-plugin</artifactId>
+                    <version>2.8</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>2.1.2</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>2.8</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.10</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.mortbay.jetty</groupId>
+                    <artifactId>maven-jetty-plugin</artifactId>
+                    <version>${jetty-version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.alibaba.citrus.tool</groupId>
+                    <artifactId>maven-springext-plugin</artifactId>
+                    <version>${springext-plugin-version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <includes>
+                    <include>**/*.*</include>
+                </includes>
+            </resource>
+        </resources>
+        <filters>
+            <filter>../kitty.properties</filter>
+        </filters>
+        <finalName>kitty</finalName>
+    </build>
+    
+</project>

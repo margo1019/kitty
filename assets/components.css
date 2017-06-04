@@ -1,0 +1,132 @@
+/**
+ * 页面大小调整按钮样式
+ */
+.expandButton {
+    float: left;
+    width: 13px;
+    height: 21px;
+    margin-right: 10px;
+    background: url(http://img04.taobaocdn.com/tps/i4/T1pu5_XbhrXXXXXXXX-26-13.png) no-repeat 0 center;
+}
+/**
+ * 默认按钮样式
+ */
+.ui-btn-m-primary, .ui-btn-m {
+    padding:0 10px;
+    display:inline-block;
+    height:20px;
+    background:url(http://a.tbcdn.cn/apps/tmall/mui/btn/img/btn.png) repeat-x;
+    color:#fff;
+    font-size:12px;
+    border:0 none;
+    border-left:1px solid #950b00;
+    border-right:1px solid #950b00;
+    cursor:pointer;
+    outline: none;
+    overflow:visible;
+    -moz-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    *zoom:1;
+}
+.ui-btn-m-primary {
+    background-color: #950b00;
+    border-color: #950b00;
+    color:#fff;
+}
+.ui-btn-m {
+    background-color: #CCC;
+    border-color: #CCC;
+    color: #333;
+}
+.ui-btn-m-primary, .ui-btn-m {
+    height:25px;
+    line-height:25px;
+    font-size:12px;
+    font-weight:bold;
+}
+.ui-btn-m-primary {
+    background-position:0 -80px;
+}
+.ui-btn-m-primary:hover {
+    background-position:0 -105px;
+    text-decoration: none;
+}
+.ui-btn-m-primary:active {
+    background-position:0 -130px;
+}
+.ui-btn-m-primary-selected {
+    background-position:0 -155px;
+}
+.ui-btn-m {
+    background-position: 0 -380px;
+}
+.ui-btn-m:hover {
+    background-position:0 -405px;
+    text-decoration: none;
+}
+.ui-btn-m:active {
+    background-position:0 -430px;
+}
+.ui-btn-m-selected {
+    background-position:0 -455px;
+}
+
+/**
+ * 默认文本框样式
+ */
+.wbc-text {
+    position: relative;
+}
+.wbc-text label {
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    color: #666;
+}
+.wbc-text input {
+    height: 21px;
+}
+.wbc-text .ks-select-calendar {
+	background-color: #fff;
+}
+.wbc-select {
+	height: 23px;
+}
+
+/**
+ * 默认卡盘样式
+ */
+.tab {
+    border-bottom: 2px solid #9a0101;
+    padding-left: 30px;
+    margin-top: 6px;
+}
+.tab li {
+    float: left;
+    width: 81px;
+    height: 25px;
+    line-height: 25px;
+    background: url(http://img03.taobaocdn.com/tps/i3/T1oOOrXlp1XXXXXXXX-162-25.png) no-repeat -81px 0;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 3px;
+}
+.tab li.selected {
+    background-position: 0 0;
+    font-weight: bold;
+}
+.tab li a {
+    text-decoration: none;
+    color: #000;
+}
+.tab li.selected a {
+    color: #fff;
+}
+/**
+ * 分页样式
+ */
+.pagination {
+    text-align: center;
+}

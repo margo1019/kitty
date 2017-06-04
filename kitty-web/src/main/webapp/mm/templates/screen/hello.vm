@@ -1,0 +1,46 @@
+$page.setTitle("Hello, $name")
+<p>Hello, $name!</p>
+
+		<form method="POST" name="applySource" action="hello.htm">
+			<input type="hidden" name="action" value="simpleAction" />
+		    <table>
+		        <tr>
+		            <td>应用英文名称<span class="required" style="color:red">**</span></td>
+		            <td><input type="text" maxLength="25" name="appName" value="$!stringEscapeUtil.escapeHtml($!si.appName)" style="width:255px;" /></td>
+		            <td><span style="color:red">$!nameError</span></td>
+		        </tr>
+		        <tr>
+		            <td>模块英文名称<span class="required" style="color:red">**</span></td>
+		            <td><input type="text" maxLength="50" name="component" value="$!stringEscapeUtil.escapeHtml($!si.component)" style="width:255px;" /></td>
+		            <td><span style="color:red">$!componentError</span></td>
+		        </tr>				
+		        <tr>
+		            <td>描述<span class="required" style="color:red">**</span></td>
+		            <td><textarea name="sourceDesc" maxLength="100" style="width:255px;" rows="6">$!stringEscapeUtil.escapeHtml($!si.sourceDesc)</textarea></td>
+					<td><span style="color:red">$!sourceDescError</span></td>
+ 		        </tr>		    
+		        <tr>
+		            <td>所属分组（部门）<span class="required" style="color:red">**</span></td>
+		            <td><input type="text" maxLength="25" name="groupName" value="$!stringEscapeUtil.escapeHtml($!si.groupName)" style="width:255px;" /></td>
+					<td><span style="color:red">$!groupNameError</span></td>
+		        </tr>		
+		        <tr>
+
+		        #if ($stringUtil.equals($admin, "true"))
+			        <td>附加信息</td>
+			            <td><input type="text" maxLength="25" name="extra" value="$!stringEscapeUtil.escapeHtml($!si.extra)" style="width:255px;" /></td>
+						<td><span style="color:red">请勿填写</span></td>
+						<td><span style="color:red">$!extraError</span></td>
+					</tr>
+				#end
+					
+		        <tr>
+		            <td>操作人</td>
+		            <td><input type="text" name="applicant" size=20 value="$!operator" style="width:255px;" onfocus="this.blur()"/></td>
+		        </tr>
+		        <tr>
+		            <td><button id="submit" type="submit" name="event_submit_doTest" value="add">&nbsp;完&nbsp;成&nbsp;</button></td>		            
+		        </tr>
+		    </table>
+			<input type="hidden" maxLength="20" name="port" value="$!stringEscapeUtil.escapeHtml($!si.port)" style="width:255px;" />
+		 </form>

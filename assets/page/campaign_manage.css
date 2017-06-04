@@ -1,0 +1,24 @@
+/**
+ * 营销活动平台 活动管理
+ *
+ * wb-huangshiyu@taobao.com
+ */
+.campaignDetail table {
+    border: 0;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+.campaignDetail tr {
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #797979;
+}
+.campaignSearch {
+    background: url(http://img02.taobaocdn.com/tps/i2/T1jBK_XmNbXXXXXXXX-46-31.png) no-repeat;
+    border: 0;
+    height: 31px;
+    line-height: 31px;
+    padding: 0 23px;
+    cursor: pointer;
+}

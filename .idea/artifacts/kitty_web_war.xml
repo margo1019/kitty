@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="kitty-web:war">
+    <output-path>$PROJECT_DIR$/kitty-web/target</output-path>
+    <root id="archive" name="kitty.war">
+      <element id="artifact" artifact-name="kitty-web:war exploded" />
+    </root>
+  </artifact>
+</component>

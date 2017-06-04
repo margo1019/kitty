@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="GB2312" ?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://localhost:8080/schema/www.springframework.org/schema/beans/spring-beans.xsd
+    "
+    default-autowire="byName">
+    
+   <!-- ======================================================================== -->
+    <!--  AO定义。                                                               -->
+    <!-- ======================================================================== -->
+    <bean id="campaignAO" class="com.taobao.campaignadmin.ao.campaign.impl.DefaultCampaignAO" />
+    <bean id="campaignDepartmentAO" class="com.taobao.campaignadmin.ao.campaign.impl.DefaultCampaignDepartmentAO" />
+    <!-- util -->
+    <bean id="campDepartmentCacheUtil" class="com.taobao.campaignadmin.manager.campaign.util.CampDepartmentCacheUtil" />
+</beans>
