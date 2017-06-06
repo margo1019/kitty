@@ -6,6 +6,19 @@
         <element id="directory" name="classes">
           <element id="module-output" name="kitty-web" />
         </element>
+        <element id="directory" name="lib">
+          <element id="archive" name="kitty-arch-1.0.0.jar">
+            <element id="module-output" name="kitty-arch" />
+          </element>
+          <element id="library" level="project" name="Maven: org.apache.zookeeper:zookeeper:3.4.6" />
+          <element id="archive" name="kitty-dal-1.0.0.jar">
+            <element id="module-output" name="kitty-dal" />
+          </element>
+          <element id="library" level="project" name="Maven: junit:junit:4.6" />
+          <element id="library" level="project" name="Maven: com.taobao.notify:notify-common:2.1.0" />
+          <element id="library" level="project" name="Maven: com.taobao.notify:notify-tr-client:2.1.0" />
+          <element id="library" level="project" name="Maven: com.taobao.util:util:1.2.6" />
+        </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/kitty-web/target/kitty/META-INF/MANIFEST.MF" />

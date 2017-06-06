@@ -24,7 +24,6 @@
         <module>kitty-dal</module>
         <module>kitty-arch</module>
         <module>kitty-web</module>
-        <module>deploy</module>
     </modules>
     
     <dependencyManagement>
@@ -65,6 +64,16 @@
             <!-- 其它第三方依赖 -->
             <!-- ======================================== -->
             <dependency>
+                <groupId>com.taobao.notify</groupId>
+                <artifactId>notify-common</artifactId>
+                <version>2.1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.taobao.notify</groupId>
+                <artifactId>notify-tr-client</artifactId>
+                <version>2.1.0</version>
+            </dependency>
+            <dependency>
                 <groupId>com.taobao.util</groupId>
                 <artifactId>util</artifactId>
                 <version>1.2.6</version>
@@ -84,6 +93,11 @@
                 <groupId>org.apache.ibatis</groupId>
                 <artifactId>ibatis-sqlmap</artifactId>
                 <version>2.3.4.726</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.zookeeper</groupId>
+                <artifactId>zookeeper</artifactId>
+                <version>3.4.6</version>
             </dependency>
 
         </dependencies>

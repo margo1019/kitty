@@ -44,14 +44,6 @@
         <!-- Webx框架依赖 -->
         <!-- ================================================= -->
         <dependency>
-            <groupId>com.alibaba.citrus</groupId>
-            <artifactId>citrus-webx-all-in-one</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.toolkit</groupId>
-            <artifactId>toolkit-webx-all-in-one</artifactId>
-        </dependency>
-        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
         </dependency>

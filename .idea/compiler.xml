@@ -24,12 +24,18 @@
         <processorPath useClasspath="true" />
         <module name="kitty-dal" />
       </profile>
-      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+      <profile default="false" name="Annotation profile for kitty-arch" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="kitty-arch" />
+      </profile>
+      <profile default="false" name="Annotation profile for kitty-web" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
         <module name="kitty-web" />
       </profile>
     </annotationProcessing>
