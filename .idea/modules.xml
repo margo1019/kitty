@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/deploy/deploy.iml" filepath="$PROJECT_DIR$/deploy/deploy.iml" />
       <module fileurl="file://$PROJECT_DIR$/kitty.iml" filepath="$PROJECT_DIR$/kitty.iml" />
       <module fileurl="file://$PROJECT_DIR$/kitty-arch/kitty-arch.iml" filepath="$PROJECT_DIR$/kitty-arch/kitty-arch.iml" />
       <module fileurl="file://$PROJECT_DIR$/kitty-dal/kitty-dal.iml" filepath="$PROJECT_DIR$/kitty-dal/kitty-dal.iml" />

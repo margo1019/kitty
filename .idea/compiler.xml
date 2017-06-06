@@ -17,19 +17,19 @@
       <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
-      <profile default="false" name="Annotation profile for kitty-web" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="true" />
-        <module name="kitty-web" />
-      </profile>
       <profile default="false" name="Annotation profile for kitty-arch" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="kitty-arch" />
+      </profile>
+      <profile default="false" name="Annotation profile for kitty-web" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="kitty-web" />
       </profile>
       <profile default="false" name="Annotation profile for kitty-dal" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -40,7 +40,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="deploy" target="1.5" />
       <module name="kitty" target="1.5" />
       <module name="kitty-arch" target="1.5" />
       <module name="kitty-dal" target="1.5" />

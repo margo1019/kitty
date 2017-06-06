@@ -3,32 +3,9 @@
   <component name="FacetManager">
     <facet type="web" name="Web">
       <configuration>
-        <descriptors>
-          <deploymentDescriptor name="jboss-web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" />
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
-        </descriptors>
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-      </configuration>
-    </facet>
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="Spring Application Context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/biz-hsf-consumer.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/dal-dao.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/common/webx-component.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/common/uris.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/common/webx-component-and-root.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/common/pipeline.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/common/resources.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/common/pipeline-exception.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/form.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/webx-mm.xml</file>
-          <file>file://$MODULE_DIR$/src/main/webapp/WEB-INF/webx.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/biz-ao.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/biz-manager.xml</file>
-        </fileset>
       </configuration>
     </facet>
   </component>
@@ -36,8 +13,6 @@
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />

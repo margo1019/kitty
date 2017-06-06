@@ -42,26 +42,7 @@
                 <artifactId>kitty-biz</artifactId>
                 <version>1.0.0</version>
            </dependency>
-           
-            <!-- ================================================= -->
-            <!-- Webx框架依赖 -->
-            <!-- ================================================= -->
-            <dependency>
-                <groupId>com.alibaba.citrus</groupId>
-                <artifactId>citrus-webx-all-in-one</artifactId>
-                <version>3.0.5</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.toolkit</groupId>
-                <artifactId>toolkit-webx-all-in-one</artifactId>
-                <version>2.0</version>
-            </dependency>            
-           <dependency>
-                <groupId>com.alibaba.toolkit.biz.command</groupId>
-                <artifactId>command</artifactId>
-                <version>1.0</version>
-            </dependency>       
-                 
+
             <!-- ================================================= -->
             <!-- Spring框架 -->
             <!-- ================================================= -->         
@@ -74,12 +55,6 @@
             <!-- ================================================= -->
             <!-- 单元测试 -->
             <!-- ================================================= -->
-            <dependency>
-                <groupId>com.alibaba.citrus</groupId>
-                <artifactId>citrus-test-all</artifactId>
-                <version>3.0.7</version>
-                <scope>test</scope>
-            </dependency>       
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
@@ -110,7 +85,6 @@
                 <artifactId>ibatis-sqlmap</artifactId>
                 <version>2.3.4.726</version>
             </dependency>
-
 
         </dependencies>
     </dependencyManagement>    

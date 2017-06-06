@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: com.alibaba.citrus:citrus-webx-all-in-one:3.0.5">
     <CLASSES>
-      <root url="jar://D:/Develop/.m2/repository/com/alibaba/citrus/citrus-webx-all-in-one/3.0.5/citrus-webx-all-in-one-3.0.5.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/citrus/citrus-webx-all-in-one/3.0.5/citrus-webx-all-in-one-3.0.5.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://D:/Develop/.m2/repository/com/alibaba/citrus/citrus-webx-all-in-one/3.0.5/citrus-webx-all-in-one-3.0.5-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/citrus/citrus-webx-all-in-one/3.0.5/citrus-webx-all-in-one-3.0.5-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://D:/Develop/.m2/repository/com/alibaba/citrus/citrus-webx-all-in-one/3.0.5/citrus-webx-all-in-one-3.0.5-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/com/alibaba/citrus/citrus-webx-all-in-one/3.0.5/citrus-webx-all-in-one-3.0.5-sources.jar!/" />
     </SOURCES>
   </library>
 </component>
