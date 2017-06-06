@@ -2,7 +2,7 @@ package thread;
 
 public class BasicThreadT {
 
-    public static void bt () {
+    public static void bt() {
         Thread at = new Thread();
         at.start();
         at.run();
