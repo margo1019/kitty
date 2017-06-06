@@ -1,9 +1,0 @@
-<bean id="pingjiaNotifyManager" class="com.taobao.notify.remotingclient.NotifyManagerBean"
-      init-method="init">
-    <property name="publishTopics">
-        <list>
-            <value>MSG_PINGJIA</value>
-        </list>
-    </property>
-    <property name="groupId" value="P-wuliupingjia-notify" />
-</bean>
