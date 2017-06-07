@@ -229,9 +229,6 @@
                 </includes>
             </resource>
         </resources>
-        <filters>
-            <filter>../kitty.properties</filter>
-        </filters>
         <finalName>kitty</finalName>
     </build>
     
