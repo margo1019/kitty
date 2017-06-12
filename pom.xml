@@ -14,7 +14,7 @@
         <java.version>1.5</java.version>
         <java.encoding>UTF-8</java.encoding>
         <webx-version>3.0.7</webx-version>
-        <spring-version>2.5.6</spring-version>
+        <spring-version>4.2.4.RELEASE</spring-version>
         <springext-plugin-version>1.0</springext-plugin-version>
         <jetty-version>6.1.22</jetty-version>
         <project.build.sourceEncoding>${java.encoding}</project.build.sourceEncoding>
@@ -44,13 +44,63 @@
 
             <!-- ================================================= -->
             <!-- Spring框架 -->
-            <!-- ================================================= -->         
+            <!-- ================================================= -->
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring</artifactId>
+                <artifactId>spring-core</artifactId>
                 <version>${spring-version}</version>
-            </dependency>   
-                        
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-orm</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-web</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-test</artifactId>
+                <version>${spring-version}</version>
+            </dependency>
+
             <!-- ================================================= -->
             <!-- 单元测试 -->
             <!-- ================================================= -->
@@ -63,6 +113,11 @@
             <!-- ======================================== -->
             <!-- 其它第三方依赖 -->
             <!-- ======================================== -->
+            <dependency>
+                <groupId>commons-logging</groupId>
+                <artifactId>commons-logging</artifactId>
+                <version>1.1.3</version>
+            </dependency>
             <dependency>
                 <groupId>com.taobao.notify</groupId>
                 <artifactId>notify-common</artifactId>
