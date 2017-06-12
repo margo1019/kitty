@@ -1,5 +1,8 @@
 package proxy;
 
+import proxy.piper.Piper;
+import proxy.piper.PiperImplClean;
+
 public class StaticProxy implements Piper {
     Piper proxy;
     public StaticProxy(Piper piper) {

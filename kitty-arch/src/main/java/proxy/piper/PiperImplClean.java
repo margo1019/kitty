@@ -1,4 +1,4 @@
-package proxy;
+package proxy.piper;
 
 public class PiperImplClean implements Piper {
 

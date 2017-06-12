@@ -1,9 +1,8 @@
-package proxy;
+package proxy.piper;
 
-public interface Piper {
-    public void pipe();
-}
-
+/**
+ * Created by yinfei on 2017/6/13.
+ */
 class PiperImpl implements Piper {
 
     @Override
@@ -22,4 +21,3 @@ class PiperImpl implements Piper {
     }
 
 }
-
