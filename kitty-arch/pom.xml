@@ -1,5 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>kitty</artifactId>
@@ -25,15 +26,10 @@
             <groupId>commons-logging</groupId>
             <artifactId>commons-logging</artifactId>
         </dependency>
-		<dependency>
-      		<groupId>org.apache.zookeeper</groupId>
-       		<artifactId>zookeeper</artifactId>
- 		</dependency>
-
         <dependency>
-            <groupId>kitty</groupId>
-            <artifactId>kitty-dal</artifactId>
-        </dependency>           
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>junit</groupId>
@@ -49,6 +45,21 @@
             <groupId>com.taobao.notify</groupId>
             <artifactId>notify-tr-client</artifactId>
         </dependency>
-
     </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>${maven-antrun.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>com.taobao.pandora</groupId>
+                    <artifactId>pandora-boot-maven-plugin</artifactId>
+                    <version>${pandora-boot-maven-plugin.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>

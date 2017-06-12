@@ -1,10 +1,13 @@
 package proxy.spring;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.aop.framework.ProxyFactory;
 import proxy.Piper;
 import proxy.PiperImplClean;
 
 public class SpringAopProxy {
+    protected static final Log logger = LogFactory.getLog(SpringAopProxy.class);
 
     public static void testBeforeAfter () {
         ProxyFactory pf = new ProxyFactory();

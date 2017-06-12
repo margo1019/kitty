@@ -18,12 +18,12 @@
         <springext-plugin-version>1.0</springext-plugin-version>
         <jetty-version>6.1.22</jetty-version>
         <project.build.sourceEncoding>${java.encoding}</project.build.sourceEncoding>
+        <maven-antrun.version>1.8</maven-antrun.version>
+        <pandora-boot-maven-plugin.version>2.1.7</pandora-boot-maven-plugin.version>
     </properties>
     
     <modules>
-        <module>kitty-dal</module>
         <module>kitty-arch</module>
-        <module>kitty-web</module>
     </modules>
     
     <dependencyManagement>
@@ -159,131 +159,19 @@
     </dependencyManagement>    
     
     <build>
-        <plugins>
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
-                </configuration>
-            </plugin>
-             <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <configuration>
-                    <includes>
-                        <include>**/*Tests.java</include>
-                    </includes>
-                    <argLine>-Xmx256m</argLine>
-                </configuration>
-            </plugin>           
-            <plugin>
-                <artifactId>maven-eclipse-plugin</artifactId>
-                <configuration>
-                    <downloadSources>true</downloadSources>
-                    <classpathContainers>
-                        <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
-                    </classpathContainers>
-                </configuration>
-            </plugin>
-            <plugin>
-                <artifactId>maven-source-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>attach-sources</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.mortbay.jetty</groupId>
-                <artifactId>maven-jetty-plugin</artifactId>
-                <configuration>
-                    <contextPath>/</contextPath>
-                    <connectors>
-                        <connector implementation="org.mortbay.jetty.nio.SelectChannelConnector">
-                            <port>8081</port>
-                            <maxIdleTime>60000</maxIdleTime>
-                        </connector>
-                    </connectors>
-                    <requestLog implementation="org.mortbay.jetty.NCSARequestLog">
-                        <filename>target/access.log</filename>
-                        <retainDays>90</retainDays>
-                        <append>false</append>
-                        <extended>false</extended>
-                        <logTimeZone>GMT+8:00</logTimeZone>
-                    </requestLog>
-                    <systemProperties>
-                        <systemProperty>
-                            <name>productionMode</name>
-                            <value>false</value>
-                        </systemProperty>
-                    </systemProperties>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>com.alibaba.citrus.tool</groupId>
-                <artifactId>maven-springext-plugin</artifactId>
-            </plugin>
-        </plugins>
         <pluginManagement>
-            <plugins>               
+            <plugins>
                 <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>2.3.2</version>
+                    <artifactId>maven-antrun-plugin</artifactId>
+                    <version>${maven-antrun.version}</version>
                 </plugin>
                 <plugin>
-                    <artifactId>maven-jar-plugin</artifactId>
-                    <version>2.3.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-deploy-plugin</artifactId>
-                    <version>2.7</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-eclipse-plugin</artifactId>
-                    <version>2.8</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-source-plugin</artifactId>
-                    <version>2.1.2</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-javadoc-plugin</artifactId>
-                    <version>2.8</version>
-                </plugin>
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>2.10</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.mortbay.jetty</groupId>
-                    <artifactId>maven-jetty-plugin</artifactId>
-                    <version>${jetty-version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>com.alibaba.citrus.tool</groupId>
-                    <artifactId>maven-springext-plugin</artifactId>
-                    <version>${springext-plugin-version}</version>
+                    <groupId>com.taobao.pandora</groupId>
+                    <artifactId>pandora-boot-maven-plugin</artifactId>
+                    <version>${pandora-boot-maven-plugin.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
-        <resources>
-            <resource>
-                <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.xml</include>
-                </includes>
-            </resource>
-            <resource>
-                <directory>src/main/resources</directory>
-                <filtering>true</filtering>
-                <includes>
-                    <include>**/*.*</include>
-                </includes>
-            </resource>
-        </resources>
         <finalName>kitty</finalName>
     </build>
     
