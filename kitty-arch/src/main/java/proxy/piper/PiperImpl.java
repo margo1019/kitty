@@ -1,14 +1,11 @@
 package proxy.piper;
 
-/**
- * Created by yinfei on 2017/6/13.
- */
-class PiperImpl implements Piper {
+public class PiperImpl implements Piper {
 
     @Override
     public void pipe() {
         before();
-        System.out.println("piping");
+        System.out.println("piping noneproxy");
         after();
     }
 
