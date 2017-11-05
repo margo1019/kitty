@@ -5,7 +5,7 @@ import java.io.RandomAccessFile;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
-public class RafBufferTest {
+public class ChannelTest {
 
     public static void main(String[] args) throws IOException {
         RandomAccessFile raf = new RandomAccessFile("D://题目.txt", "rw");
