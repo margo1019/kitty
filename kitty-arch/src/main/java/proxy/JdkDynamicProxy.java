@@ -15,8 +15,7 @@ public class JdkDynamicProxy implements InvocationHandler {
     }
 
     public <T> T getProxy() {
-        return (T) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass()
-                .getInterfaces(), this);
+        return (T) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), this);
     }
 
     @Override
@@ -36,7 +35,7 @@ public class JdkDynamicProxy implements InvocationHandler {
     }
 
     public static void main(String[] args) {
-        Piper proxy = (Piper)new JdkDynamicProxy(new PiperImplClean()).getProxy();
+        Piper proxy = (Piper) new JdkDynamicProxy(new PiperImplClean()).getProxy();
         proxy.pipe();
     }
 

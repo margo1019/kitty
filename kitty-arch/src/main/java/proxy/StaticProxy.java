@@ -3,6 +3,11 @@ package proxy;
 import proxy.piper.Piper;
 import proxy.piper.PiperImplClean;
 
+/**
+ * 用于代理各种piper类型。
+ * <p>
+ * iron pipe, plastic pipe，等，before()和after()不用在每种piper中都重写一次。
+ */
 public class StaticProxy implements Piper {
     Piper proxy;
 
