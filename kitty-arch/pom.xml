@@ -15,6 +15,10 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.lmax.disruptor</groupId>
+            <artifactId>disruptor</artifactId>
+        </dependency>
+        <dependency>
             <groupId>com.cainiao.ruijin</groupId>
             <artifactId>client</artifactId>
         </dependency>
