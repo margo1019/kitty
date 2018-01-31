@@ -20,6 +20,7 @@ public class CglibDynamicProxy implements MethodInterceptor {
         return (T) Enhancer.create(cls, this);
     }
 
+    @Override
     public Object intercept(Object target, Method method, Object[] args, MethodProxy methodProxy)
             throws Throwable {
         before();

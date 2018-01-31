@@ -6,19 +6,25 @@ import proxy.piper.PiperImplClean;
 
 public class ProxyTest {
 
-    // 无代理
+    /**
+     * 无代理
+     */
     public static void testNoneProxy() {
         Piper piper = new PiperImpl();
         piper.pipe();
     }
 
-    // 静态代理
+    /**
+     * 静态代理
+     */
     public static void testStaticProxy() {
         StaticProxy sp = new StaticProxy(new PiperImplClean());
         sp.pipe();
     }
 
-    // jdk动态代理
+    /**
+     * jdk动态代理
+     */
     public static void testJdkProxy() {
         Piper proxy = (Piper)new JdkDynamicProxy(new PiperImplClean()).getProxy();
         proxy.pipe();

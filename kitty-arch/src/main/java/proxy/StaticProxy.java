@@ -15,6 +15,7 @@ public class StaticProxy implements Piper {
         this.proxy = piper;
     }
 
+    @Override
     public void pipe() {
         before();
         proxy.pipe();
