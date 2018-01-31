@@ -26,18 +26,13 @@ public class HSFTest {
     private FulfilQueryService fulfilQueryService;
 
     @Test
-    public void testEmpty() {
-        System.out.println("empty finished!");
-    }
-
-    @Test
     public void testGetFulfilOrder() {
         FulfilOrderQueryRequest fulfilOrderQueryRequest = new FulfilOrderQueryRequest();
         fulfilOrderQueryRequest.setOutBizCode("LP00038366276656");
         fulfilOrderQueryRequest.setFulfilOrderSource(FulfilOrderSourceEnum.LP);
         com.taobao.logistics.fcs.common.domain.SingleResultDO<FulfilOrderDTO> result
             = fulfilQueryService.queryFulfilOrder(fulfilOrderQueryRequest);
-        System.out.println(result.isSuccess());
+        System.out.println(result.getResult().getFeatureMap());
         System.out.println("hsf test successfully");
     }
 
