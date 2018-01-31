@@ -12,17 +12,25 @@
     <version>1.0.0</version>
     <properties>
         <java.version>1.8</java.version>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
         <java.encoding>UTF-8</java.encoding>
         <webx-version>3.0.7</webx-version>
-        <spring-version>4.2.4.RELEASE</spring-version>
+        <spring-version>4.3.13.RELEASE</spring-version>
         <springext-plugin-version>1.0</springext-plugin-version>
         <jetty-version>6.1.22</jetty-version>
         <project.build.sourceEncoding>${java.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${java.encoding}</project.reporting.outputEncoding>
+        <mockito-all.version>1.10.19</mockito-all.version>
+        <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
         <maven-antrun.version>1.8</maven-antrun.version>
-        <pandora-boot-maven-plugin.version>2.1.7</pandora-boot-maven-plugin.version>
+        <pandora-boot.version>2018-01-release</pandora-boot.version>
+        <pandora-boot-maven-plugin.version>2.1.7.11</pandora-boot-maven-plugin.version>
+        <velocity.starter.version>1.0.2</velocity.starter.version>
     </properties>
 
     <modules>
+        <module>kitty-start</module>
         <module>kitty-arch</module>
     </modules>
 
@@ -49,13 +57,47 @@
             </dependency>
 
             <!-- ================================================= -->
-            <!-- Spring框架 -->
+            <!-- BOOTS -->
             <!-- ================================================= -->
             <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>2.8.11</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.taobao.pandora</groupId>
+                <artifactId>pandora-boot-starter-bom</artifactId>
+                <version>${pandora-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>velocity-spring-boot-starter</artifactId>
+                <version>${velocity.starter.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito-all.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- ================================================= -->
+            <!-- Spring框架 -->
+            <!-- ================================================= -->
+            <!--dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
                 <version>${spring-version}</version>
-            </dependency>
+            </dependency-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-beans</artifactId>
@@ -91,7 +133,7 @@
                 <artifactId>spring-orm</artifactId>
                 <version>${spring-version}</version>
             </dependency>
-            <dependency>
+            <!--dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-web</artifactId>
                 <version>${spring-version}</version>
@@ -105,16 +147,7 @@
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
                 <version>${spring-version}</version>
-            </dependency>
-
-            <!-- ================================================= -->
-            <!-- 单元测试 -->
-            <!-- ================================================= -->
-            <dependency>
-                <groupId>junit</groupId>
-                <artifactId>junit</artifactId>
-                <version>4.6</version>
-            </dependency>
+            </dependency-->
 
             <!-- ======================================== -->
             <!-- 其它第三方依赖 -->
@@ -164,6 +197,24 @@
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
                 <version>3.4.6</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-log4j12</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>junit</groupId>
+                        <artifactId>junit</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
 
         </dependencies>
