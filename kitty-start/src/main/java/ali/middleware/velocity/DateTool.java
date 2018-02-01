@@ -1,4 +1,4 @@
-package boot.velocity;
+package ali.middleware.velocity;
 
 import java.util.Date;
 

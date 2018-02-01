@@ -4,10 +4,9 @@ import org.springframework.context.annotation.PropertySource;
 
 /**
  * 单元测试的Spring Boot配置类
- * @author chengxu
  */
-@SpringBootApplication(scanBasePackages = {"boot"})
-@PropertySource(value = { "classpath:test.properties" })
+@SpringBootApplication(scanBasePackages = {"boot", "ali"})
+@PropertySource(value = { "classpath:test.properties", "classpath:application.properties" })
 public class TestApplication {
 
     //@HSFConsumer(serviceVersion = "${hsf.version.daily}")

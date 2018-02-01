@@ -1,9 +1,6 @@
-import com.alibaba.boot.hsf.annotation.HSFConsumer;
-
-import com.cainiao.fulfil.basic.enums.fulfilorder.FulfilOrderSourceEnum;
-import com.cainiao.fulfil.fcs.api.FulfilQueryService;
+import ali.middleware.hsf.FuifilOrderHsfWrapper;
+import ali.middleware.hsf.HelloWorldService;
 import com.cainiao.fulfil.fcs.dto.FulfilOrderDTO;
-import com.cainiao.fulfil.fcs.request.query.FulfilOrderQueryRequest;
 import com.taobao.pandora.boot.test.junit4.DelegateTo;
 import com.taobao.pandora.boot.test.junit4.PandoraBootRunner;
 import org.junit.Test;
@@ -23,17 +20,22 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class HSFTest {
 
     @Autowired
-    private FulfilQueryService fulfilQueryService;
+    private FuifilOrderHsfWrapper fuifilOrderHsfWrapper;
+
+    @Autowired
+    private HelloWorldService helloWorldService;
 
     @Test
     public void testGetFulfilOrder() {
-        FulfilOrderQueryRequest fulfilOrderQueryRequest = new FulfilOrderQueryRequest();
-        fulfilOrderQueryRequest.setOutBizCode("LP00038366276656");
-        fulfilOrderQueryRequest.setFulfilOrderSource(FulfilOrderSourceEnum.LP);
-        com.taobao.logistics.fcs.common.domain.SingleResultDO<FulfilOrderDTO> result
-            = fulfilQueryService.queryFulfilOrder(fulfilOrderQueryRequest);
-        System.out.println(result.getResult().getFeatureMap());
+        FulfilOrderDTO fulfilOrderDTO = this.fuifilOrderHsfWrapper.queryFulfilOrder("LP00038366276656");
+        System.out.println(fulfilOrderDTO);
         System.out.println("hsf test successfully");
+    }
+
+    @Test
+    public void testHelloWorldService() {
+        String result = helloWorldService.sayHelloWorld();
+        System.out.println("hello result is " + result);
     }
 
 }

@@ -10,7 +10,7 @@ import com.taobao.pandora.boot.PandoraBootstrap;
  *
  * @author chengxu
  */
-@SpringBootApplication(scanBasePackages = {"boot"})
+@SpringBootApplication(scanBasePackages = {"java"})
 public class Application {
 
     public static void main(String[] args) {

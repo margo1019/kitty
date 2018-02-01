@@ -63,6 +63,14 @@
             <groupId>com.alibaba.boot</groupId>
             <artifactId>pandora-hsf-spring-boot-autoconfigure</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>pandora-diamond-spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.taobao.pandora</groupId>
+            <artifactId>taobao-hsf.sar</artifactId>
+        </dependency>
 
         <!-- ======================================== -->
         <!-- 业务依赖 -->
