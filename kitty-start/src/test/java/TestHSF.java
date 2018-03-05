@@ -17,7 +17,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(PandoraBootRunner.class)
 @DelegateTo(SpringJUnit4ClassRunner.class)
 @SpringBootTest(classes = { TestApplication.class })
-public class HSFTest {
+public class TestHSF {
 
     @Autowired
     private FuifilOrderHsfWrapper fuifilOrderHsfWrapper;

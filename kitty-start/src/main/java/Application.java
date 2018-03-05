@@ -1,5 +1,3 @@
-package boot;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -10,7 +8,7 @@ import com.taobao.pandora.boot.PandoraBootstrap;
  *
  * @author chengxu
  */
-@SpringBootApplication(scanBasePackages = {"java"})
+@SpringBootApplication(scanBasePackages = {"springboot", "ali"})
 public class Application {
 
     public static void main(String[] args) {
