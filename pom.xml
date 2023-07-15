@@ -24,13 +24,11 @@
         <mockito-all.version>1.10.19</mockito-all.version>
         <spring-boot.version>1.5.9.RELEASE</spring-boot.version>
         <maven-antrun.version>1.8</maven-antrun.version>
-        <pandora-boot.version>2018-01-release</pandora-boot.version>
-        <pandora-boot-maven-plugin.version>2.1.7.11</pandora-boot-maven-plugin.version>
         <velocity.starter.version>1.0.2</velocity.starter.version>
     </properties>
 
     <modules>
-        <module>kitty-start</module>
+        <!--module>kitty-start</module-->
         <module>kitty-arch</module>
     </modules>
 
@@ -67,38 +65,12 @@
                 <scope>import</scope>
             </dependency>
             <dependency>
-                <groupId>com.taobao.pandora</groupId>
-                <artifactId>pandora-boot-starter-bom</artifactId>
-                <version>${pandora-boot.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>velocity-spring-boot-starter</artifactId>
-                <version>${velocity.starter.version}</version>
-            </dependency>
-            <dependency>
                 <groupId>org.mockito</groupId>
                 <artifactId>mockito-all</artifactId>
                 <version>${mockito-all.version}</version>
                 <scope>test</scope>
             </dependency>
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>pandora-hsf-spring-boot-autoconfigure</artifactId>
-                <version>2018-01-release</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>pandora-diamond-spring-boot-autoconfigure</artifactId>
-                <version>2017-12-release</version>
-            </dependency>
-            <dependency>
-                <groupId>com.taobao.pandora</groupId>
-                <artifactId>taobao-hsf.sar</artifactId>
-                <version>2018-01-release</version>
-            </dependency>
+
 
             <!-- ======================================== -->
             <!-- 其它第三方依赖 -->
@@ -113,11 +85,11 @@
                 <artifactId>spring-aop</artifactId>
                 <version>${spring-version}</version>
             </dependency>
-            <dependency>
+            <!--dependency>
                 <groupId>com.lmax.disruptor</groupId>
                 <artifactId>disruptor</artifactId>
                 <version>3.3.4</version>
-            </dependency>
+            </dependency-->
             <dependency>
                 <groupId>commons-logging</groupId>
                 <artifactId>commons-logging</artifactId>
@@ -202,11 +174,6 @@
                 <plugin>
                     <artifactId>maven-antrun-plugin</artifactId>
                     <version>${maven-antrun.version}</version>
-                </plugin>
-                <plugin>
-                    <groupId>com.taobao.pandora</groupId>
-                    <artifactId>pandora-boot-maven-plugin</artifactId>
-                    <version>${pandora-boot-maven-plugin.version}</version>
                 </plugin>
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
